@@ -19,11 +19,11 @@ Check out the [project site](http://www.umich.edu/~ywchao/semantic_affordance/) 
 
 ## Quick start
 
-1. Download a copy of our [affordance dataset](http://www.umich.edu/~ywchao/semantic_affordance/data/affordance_data.tar.gz).
+1. Download a copy of our [affordance dataset](http://www.umich.edu/~ywchao/semantic_affordance/data/affordance_data.tar.gz) and unzip the file.
 
 2. Change Matlab's current directory into the directory of this README.
 
-3. Change the path `data_dir` in `config.m` to the unzipped folder `affordance_data/`.
+3. Change the path `data_dir` in `config.m` to the downloaded folder `affordance_data/`.
 ```MATLAB
 data_dir = '/z/ywchao/datasets/affordance_data/';
 ```
