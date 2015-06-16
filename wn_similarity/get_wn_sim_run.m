@@ -44,7 +44,10 @@ if ~exist(n_sim_mat,'file')
             n_list_file, ...
             pos, ...
             is_sim_root);
-        system(cmd);
+        [status,cmdout] = system(cmd);
+        if status ~= 0
+          error('failed to extract similarities.\n');
+        end
     end
     
     % read similarity file

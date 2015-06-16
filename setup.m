@@ -11,9 +11,7 @@ fprintf('\n');
 try
     get_wn_sim_run;
 catch err
-    fprintf('extracting wordnet similarities for mscoco objects ... \n');
-    fprintf('  wnsim_base: %s\n',wnsim_base);
-    if ~exist(wnsim_base,'dir')
+    if ~exist(n_sim_mat,'file')
         system('wget http://www.umich.edu/~ywchao/semantic_affordance/data/wn_similarity.tar.gz -P cache');
         system('tar -zxvf cache/wn_similarity.tar.gz -C cache');
     end

@@ -62,6 +62,7 @@ PRED_OUT = zeros(size(GTMAT));
 
 % start prediction
 for n = 1:num_noun
+    tot_th = tic;
     nname = NNAME{n};
     fprintf('  test on %02d %-15s   ',n,nname);
     
@@ -98,6 +99,7 @@ for n = 1:num_noun
     fprintf('iter: %04d  ',numIters);
     fprintf('(mu,std) = (%6.4f,%6.4f)  ',mean(pred_raw),std(pred_raw));
     fprintf('#pos: %3d  #neg: %3d   ',sum(pred_out==1),sum(pred_out==-1));
+    fprintf('time: %.3fs',toc(tot_th));
     fprintf('\n');
     
     % save result
