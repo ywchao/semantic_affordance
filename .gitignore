@@ -1,0 +1,13 @@
+# binary files
+*.pyc
+
+# zip files
+*.zip
+*.tar.gz
+
+# kpmf code
+3rd_party/kpmf/
+
+# cache files
+cache/
+
