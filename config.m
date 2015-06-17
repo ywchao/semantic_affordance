@@ -9,6 +9,7 @@ gt_base    = fullfile(base_dir,'cache/vn_gt/');
 wnsim_base = fullfile(base_dir,'cache/wn_similarity/');
 cf_base    = fullfile(base_dir,'cache/collab_filt/');
 eval_base  = fullfile(base_dir,'cache/evaluation/');
+vis_base   = fullfile(base_dir,'cache/visualize/');
 
 % wordnet similarities
 n_list_file = [wnsim_base 'n_mscoco_list'];

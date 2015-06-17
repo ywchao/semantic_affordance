@@ -19,19 +19,23 @@ Check out the [project site](http://www.umich.edu/~ywchao/semantic_affordance/) 
 
 ## Quick start
 
-1. Download a copy of our [affordance dataset](http://www.umich.edu/~ywchao/semantic_affordance/data/affordance_data.tar.gz) and unzip the file.
+0. Download a copy of our [affordance dataset](http://www.umich.edu/~ywchao/semantic_affordance/data/affordance_data.tar.gz) and unzip the file.
 
-2. Change Matlab's current directory into the directory of this README.
+0. Get the source code by cloning the repository: `git clone https://github.com/ywchao/semantic_affordance.git`
 
-3. Change the path `data_dir` in `config.m` to the downloaded folder `affordance_data/`.
-```MATLAB
-data_dir = '/z/ywchao/datasets/affordance_data/';
-```
+0. Change into the source code directory `cd semantic_affordance` and start MATLAB `matlab`. You should see the message `added paths for the experiment!` followed by the MATLAB prompt `>>`.
 
-4. Run `setup` to prepare the required files.
+0. Change the path `data_dir` in `config.m` to the downloaded folder `affordance_data/`.
+  <pre>
+  data_dir = '/z/ywchao/datasets/affordance_data/';
+  </pre>
+
+0. Run `setup` to prepare the required files.
   -  Generate ground-truth binary labels from afforadance data
   -  Generate WordNet similarity measures for 91 MS-COCO object categories
   -  Download KPMF code
 
-5. Run `demo_cf_nn` and `demo_cf_kpmf` to reproduce the NN and KPMF results.
+0. Run `pca_2d_run` to visualize the object categories in the 2D affordance space.
+
+0. Run `demo_cf_nn` and `demo_cf_kpmf` to reproduce the NN and KPMF results.
 

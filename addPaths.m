@@ -12,3 +12,4 @@ addpath('evaluation/');
 addpath('vn_predict/');
 addpath('wn_similarity/');
 addpath('utils/');
+addpath('visualize/');
