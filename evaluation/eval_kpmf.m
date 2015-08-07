@@ -15,7 +15,8 @@ sigma_r  = param.kpmf.sigma_r;  % Variance of entries
 lambda   = param.kpmf.lambda;   % Variance for default kernel
 gamma    = param.kpmf.gamma;    % Parameter for graph kernel
 
-postfix1 = sprintf('_%s_d%d_s%4.2f_l%4.2f_g%4.2f', ...
+postfix1 = sprintf('_%s_%s_d%d_s%4.2f_l%4.2f_g%4.2f', ...
+    n_set, ...
     kernel_type, ...
     D, ...
     sigma_r, ...
@@ -42,6 +43,10 @@ res      = load(res_file);
 switch n_set
     case 'pascal'
         ccode = get_pascal_color_code();
+        leg_font_size = 10;
+    case 'mscoco'
+        ccode = distinguishable_colors(91);
+        leg_font_size = 3;
 end
 
 % evaluate cf_nn
@@ -104,7 +109,7 @@ end
 fig_name = [eval_base sprintf('pr_kpmf%s%s.pdf',postfix1,postfix2)];
 if exist(fig_name,'file') == 0
     figure(1); clf;
-    plot_one_pr(PREC,REC,AP,RAND,LEG,ccode);
+    plot_one_pr(PREC,REC,AP,RAND,LEG,ccode,leg_font_size);
     print(gcf,fig_name,'-dpdf');
     close;
 end

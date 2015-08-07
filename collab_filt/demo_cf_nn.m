@@ -7,8 +7,8 @@ load(mcoco_file);
 rseed;
 
 % set parameters
-param.n_set       = 'pascal';
-param.kernel_type = 'path';  % 'path', 'lch', 'wup'
+param.n_set       = 'pascal';  % 'pascal', 'mscoco'
+param.kernel_type = 'path';    % 'path', 'lch', 'wup'
 param.gt_thres    = gt_thres;
 
 % print parameters

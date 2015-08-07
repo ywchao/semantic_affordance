@@ -1,4 +1,4 @@
-function [  ] = plot_one_pr( PREC, REC, AP, RAND, LEG, color )
+function [  ] = plot_one_pr( PREC, REC, AP, RAND, LEG, color, leg_font_size )
 
 [~,ii] = sort(AP,'descend');
 LEG = LEG(ii);
@@ -11,8 +11,7 @@ axis([0 1 0 1]);
 [hleg,hlab] = legend(LEG,'Location','southeast');
 xlab = xlabel('recall');
 ylab = ylabel('precision');
-% set(hleg,'FontSize',7);
-set(hleg,'FontSize',10);
+set(hleg,'FontSize',leg_font_size);
 set(hlab,'linewidth',2);
 set(xlab,'FontSize',14);
 set(ylab,'FontSize',14);

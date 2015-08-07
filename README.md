@@ -38,4 +38,6 @@ Check out the [project site](http://www.umich.edu/~ywchao/semantic_affordance/) 
 0. Run `pca_2d_run` to visualize the object categories in the 2D affordance space.
 
 0. Run `demo_cf_nn` and `demo_cf_kpmf` to reproduce the NN and KPMF results.
+  - In the default setting, the code will reproduce the paper's results on 20 PASCAL object categories. To run on 91 MS-COCO object categories, change the variable `param.n_set` from `'pascal'` to `'mscoco'`
+  - If you download the [affordance dataset](http://www.umich.edu/~ywchao/semantic_affordance/data/affordance_data.tar.gz) before 2015-08-07, please re-download it as the previous one does not support the MS-COCO experiment.
 

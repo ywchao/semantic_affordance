@@ -7,7 +7,7 @@ config;
 n_set       = param.n_set;
 kernel_type = param.kernel_type;
 gt_thres    = param.gt_thres;
-postfix1    = sprintf('_%s',kernel_type);
+postfix1    = sprintf('_%s_%s',n_set,kernel_type);
 postfix2    = sprintf('_vn_gt_%4.2f_%d_%d',gt_thres.score,gt_thres.pos_n,gt_thres.neg_n);
 
 % make directories

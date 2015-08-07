@@ -10,7 +10,7 @@ num_exp     = 10000;  % number of random permutations
 n_set       = param.n_set;
 kernel_type = param.kernel_type;
 gt_thres    = param.gt_thres;
-postfix1    = sprintf('_%s',kernel_type);
+postfix1    = sprintf('_%s_%s',n_set,kernel_type);
 postfix2    = sprintf('_vn_gt_%4.2f_%d_%d',gt_thres.score,gt_thres.pos_n,gt_thres.neg_n);
 
 % make directories
@@ -27,6 +27,10 @@ res      = load(res_file);
 switch n_set
     case 'pascal'
         ccode = get_pascal_color_code();
+        leg_font_size = 10;
+    case 'mscoco'
+        ccode = distinguishable_colors(91);
+        leg_font_size = 3;
 end
 
 % evaluate cf_nn
@@ -91,7 +95,7 @@ end
 fig_name = [eval_base sprintf('pr_nn%s%s.pdf',postfix1,postfix2)];
 if exist(fig_name,'file') == 0
     figure(1); clf;
-    plot_one_pr(PREC,REC,AP,RAND,LEG,ccode);
+    plot_one_pr(PREC,REC,AP,RAND,LEG,ccode,leg_font_size);
     print(gcf,fig_name,'-dpdf');
     close;
 end

@@ -35,7 +35,7 @@ if exist('vis_base','var') ~= 0
         switch n_set
             case 'pascal'
                 font_size = 8;
-            case 'mcoco'
+            case 'mscoco'
                 font_size = 2;
         end
         

@@ -7,20 +7,26 @@ load(mcoco_file);
 rseed;
 
 % set parameters
-param.n_set       = 'pascal';
-param.kernel_type = 'path';  % 'path', 'lch', 'wup'
+param.n_set       = 'pascal';  % 'pascal', 'mscoco'
+param.kernel_type = 'path';    % 'path', 'lch', 'wup'
 param.gt_thres    = gt_thres;
 
 param.kpmf.D        = 3;        % Latent dimension
 param.kpmf.sigma_r  = 0.4;      % Variance of entries
 param.kpmf.lambda   = 5;        % Variance for default kernel
 param.kpmf.gamma    = 0.1;      % Parameter for graph kernel
-param.kpmf.eta      = 0.01;     % Learning rate
 param.kpmf.epsilon  = 1e-10;    % Tolerance
 param.kpmf.init     = [];
 param.kpmf.maxIters = 1000;
 param.kpmf.minIters = 50;
 param.kpmf.verbose  = false;
+
+switch param.n_set
+    case 'pascal'
+        param.kpmf.eta = 0.01;   % Learning rate
+    case 'mscoco'
+        param.kpmf.eta = 0.005;  % Learning rate
+end
 
 % print parameters
 fprintf('params:\n');
