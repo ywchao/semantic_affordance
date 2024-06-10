@@ -15,11 +15,11 @@ If you use this code, please cite our work:
       year = {2015},
     }
 
-Check out the [project site](http://www.umich.edu/~ywchao/semantic_affordance/) for more details.
+Check out the [project site](https://umich-ywchao-semantic-affordance.github.io/) for more details.
 
 ## Quick start
 
-1. Download a copy of our [affordance dataset](http://www.umich.edu/~ywchao/semantic_affordance/data/affordance_data.tar.gz) and unzip the file.
+1. Download a copy of our [affordance dataset](https://umich-ywchao-semantic-affordance.github.io/data/affordance_data.tar.gz) and unzip the file.
 
 2. Get the source code by cloning the repository: `git clone https://github.com/ywchao/semantic_affordance.git`
 
@@ -40,4 +40,4 @@ Check out the [project site](http://www.umich.edu/~ywchao/semantic_affordance/) 
 
 7. Run `demo_cf_nn` and `demo_cf_kpmf` to reproduce the NN and KPMF results.
     - In the default setting, the code will reproduce the paper's results on 20 PASCAL object categories. To run on 91 MS-COCO object categories, change the variable `param.n_set` from `'pascal'` to `'mscoco'`
-    - If you download the [affordance dataset](http://www.umich.edu/~ywchao/semantic_affordance/data/affordance_data.tar.gz) before 2015-08-07, please re-download it as the previous one does not support the MS-COCO experiment.
+    - If you download the [affordance dataset](https://umich-ywchao-semantic-affordance.github.io/data/affordance_data.tar.gz) before 2015-08-07, please re-download it as the previous one does not support the MS-COCO experiment.

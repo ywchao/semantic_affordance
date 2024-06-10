@@ -12,7 +12,7 @@ try
     get_wn_sim_run;
 catch err
     if ~exist(n_sim_mat,'file')
-        system('wget http://www.umich.edu/~ywchao/semantic_affordance/data/wn_similarity.tar.gz -P cache');
+        system('wget https://umich-ywchao-semantic-affordance.github.io/data/wn_similarity.tar.gz -P cache');
         system('tar -zxvf cache/wn_similarity.tar.gz -C cache');
     end
     fprintf('done.\n');
